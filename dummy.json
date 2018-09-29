@@ -1,0 +1,20 @@
+{
+	"1-08:00": {
+		"total": 5,
+		"sites": ["http://facebook.com", "http://google.com", "http://reddit.com"],
+		"site_info": {
+			"http://facebook.com": {
+				"updated":true,
+				"access_count": 1
+			},
+			"http://google.com": {
+				"updated":true,
+				"access_count": 2
+			},
+			"http://reddit.com": {
+				"updated":false,
+				"access_count": 3
+			}
+		}
+	}
+}
