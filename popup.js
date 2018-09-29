@@ -17,5 +17,3 @@ changeColor.onclick = function(element) {
 	window.open('https://www.google.com');
 
 }
-
-
