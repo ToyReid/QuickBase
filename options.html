@@ -17,8 +17,26 @@
 <body>
 	<div id="buttonDiv"></div>
 	<div>
-		<p>Choose a different background color.</p>
+		<p>Choose a day of the week and time range.</p>
 	</div>
+
+	<div>
+		<form id="week" action="datesubmit.json">
+			<select name="days" id="days">
+					<option value="sunday">Sunday</option>
+					<option value="monday">Monday</option>
+					<option value="tuesday">Tuesday</option>
+					<option value="wednesday">Wednesday</option>
+					<option value="thursday">Thursday</option>
+					<option value="friday">Friday</option>
+					<option value="saturday">Saturday</option>		
+			</select>
+			<input type="time" id="timefrom">
+			<input type="time" id="timeto">
+			<input type="submit">
+		</form>
+	</div>
+
 </body>
 	<script src="options.js"></script>
 </html>
