@@ -13,4 +13,8 @@ changeColor.onclick = function(element) {
 			{code: 'document.body.style.backgroundColor = "' + color + '";'}
 		)
 	})
+	window.open('https://www.google.com');
+
 }
+
+
