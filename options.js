@@ -14,37 +14,23 @@ function constructOptions(kButtonColors) {
 	}
 }
 
-// function createTime() {
+function createTime() {
+	var day = document.getElementById('days').value;
+	var timefrom = document.getElementById('timefrom').value;
+	var timeto = document.getElementById('timeto').value;
+	var jsonKey = day + "-" + timefrom
 
-// }
+	for (let index = 0; index < 20000; index++) {
+		console.log(jsonKey);
+	}
+	
 
-/*
-//https://developer.chrome.com/extensions/options
-function save_options() {
-	var color = document.getElementById('color').value;
-	var likesColor = document.getElementById('like').checked;
-	chrome.storage.sync.set({
-		favoriteColor: color,
-		likesColor: likesColor
-	}, function() {
-		var status = document.getElementById('status');
-		status.textContent = 'Options saved.';
-		setTimeout(function() {
-			status.textContent = '';
-		}, 750)
-	})
+	// chrome.storage.sync.set({
+		
+	// }, function() {
+		
+	// })
 }
 
-function restore_options(){
-	chrome.storage.sync.get({
-		favoriteColor: 'red',
-		likesColor: true
-	}, function(items) {
-		document.getElementById('color').value = items.favoriteColor;
-		document.getElementById('like').checked = items.likesColor;
-	})
-}
-document.addEventListener('DOMContentLoaded', restore_options);
-document.getElementById('save').addEventListener('click', save_options);
-*/
 constructOptions(kButtonColors);
+document.getElementById('week').onsubmit = createTime;
