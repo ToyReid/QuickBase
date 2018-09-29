@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ToyReid/QuickBase#readme",
   "dependencies": {
-    "@google-cloud/storage": "^2.0.3"
+    "@google-cloud/storage": "^2.0.3",
+    "socket.io": "^2.1.1"
   }
 }

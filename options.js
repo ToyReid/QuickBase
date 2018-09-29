@@ -1,8 +1,3 @@
-const fs = require('fs');
-const {Storage} = require('@google-cloud/storage');
-
-const storage = new Storage;
-
 let page = document.getElementById('buttonDiv');
 const kButtonColors = ['#3aa757', '#e8453c', '#f9bb2d', '#4688f1'];
 
