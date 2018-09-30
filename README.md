@@ -1,2 +1,2 @@
 # QuickBase
-VolHacks III - Time-based app opener
+VolHacks III - Routine website opener targeted at students who commonly open the same web pages on a schedule.
