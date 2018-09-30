@@ -1,0 +1,25 @@
+button {
+	height: 30px;
+	width: 100px;
+	outline: none;
+	margin: 10px;
+	text-align: center;
+};
+
+#introPar {
+	margin-left: 25%;
+	margin-right: 25%;
+}
+
+#introPar2 {
+	padding-left: 25%;
+	padding-right: 25%;
+}
+
+p {
+	font-size: 12pt;
+}
+
+body {
+	text-align: center;
+}

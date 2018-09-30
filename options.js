@@ -5,6 +5,7 @@ function constructOptions(kButtonColors) {
 	for (let item of kButtonColors) {
 		let button = document.createElement('button');
 		button.style.backgroundColor = item;
+		button.style.width = '30px';
 		// button.addEventListener('click', function() {
 		// 	chrome.storage.sync.set({color: item}, function() {
 		// 		console.log('color is ' + item);
@@ -17,6 +18,10 @@ function constructOptions(kButtonColors) {
 function addTextBox() {
 	var textbox = document.createElement('input');
 	textbox.type = 'text';
+	textbox.style.width = '200px';
+	textbox.style.height = '25px';
+	textbox.style.fontSize = '14pt';
+	textbox.style.margin = '5px';
 
 	var week = document.getElementById('week');
 	week.insertBefore(textbox, week[3]);
@@ -56,7 +61,7 @@ function createTime() {
 
 	var diff = timeToMin(timeto) - timeToMin(timefrom);
 
-	chrome.storage.sync.clear();
+	//chrome.storage.sync.clear();
 
 	for (let min = 0; min < diff; min += 30) {
 		jsonKeys.push(day + "-" + addStringTime(timefrom, min));
@@ -83,6 +88,24 @@ function createTime() {
 	})
 }
 
+function createTabs() {
+	var day = document.getElementById('setDays').value;
+	var time = document.getElementById('setTime').value;
+	var hour = parseInt(time.substring(0, 2));
+	var mins = Math.floor((parseInt(time.substring(3, 5))) / 30) * 30;
+
+	var k = day.toString() + "-" + zeroFill(hour, 2) + ":" + zeroFill(mins, 2);
+
+	console.log("k = ", k);
+	chrome.storage.sync.get(k, function(result) {
+		for (var url in result[k]) {
+			console.log(url);
+			chrome.tabs.create({"url": url});
+		}
+	})
+}
+
 constructOptions(kButtonColors);
 document.getElementById('addSite').addEventListener('click', addTextBox);
 document.getElementById('week').onsubmit = createTime;
+document.getElementById('demoTime').onsubmit = createTabs;

@@ -5,24 +5,19 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
-	<style>
-		button {
-			height: 30px;
-			width: 30px;
-			outline: none;
-			margin: 10px;
-		}
-	</style>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<div id="buttonDiv"></div>
-	<div>
-		<p>Choose a day of the week and time range.</p>
+	<div id="introPar">
+		<h1>QuickBase</h1>
+		<p id="introPar2">Have a routine set of web pages you open up at a specific time? Use QuickBase to open up a given set of web pages based on the current time. Setting up a profile is as simple as setting a time range and adding a URL. Then, click the QuickBase icon and 'Base Up' to open up all your sites!</p>
 	</div>
 
 	<div>
+		<h2>Select a day & time range to assign a website to open.</h2>
 		<form id="week" action="">
-			<select name="days" id="days">
+			<select name="days" id="days" class="custSel">
 				<option value="0">Sunday</option>
 				<option value="1">Monday</option>
 				<option value="2">Tuesday</option>
@@ -33,9 +28,28 @@
 			</select>
 			<input type="time" id="timefrom">
 			<input type="time" id="timeto">
+			<br>
 			<input type="submit">
 		</form>
+		<h3>Use this button to add more websites.</h3>
 		<button id="addSite">Add Website</button>
+	</div>
+
+	<div>
+		<h3>Demo Specific Time</h4>
+		<form id="demoTime" action="">
+			<select name="setDays" id="setDays" class="custSel">
+				<option value="0">Sunday</option>
+				<option value="1">Monday</option>
+				<option value="2">Tuesday</option>
+				<option value="3">Wednesday</option>
+				<option value="4">Thursday</option>
+				<option value="5">Friday</option>
+				<option value="6">Saturday</option>		
+			</select>
+			<input type="time" id="setTime">
+			<input type="submit">
+		</form>
 	</div>
 
 </body>
