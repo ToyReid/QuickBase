@@ -11,17 +11,14 @@ function listCurTabs() {
 	var n = d.getDay(); // 6
 	var mins = (Math.floor(d.getMinutes() / 30)) * 30;
 	var k = n.toString() + "-" + zeroFill(d.getHours(), 2) + ":" + zeroFill(mins, 2);
-	//var tabsToOpen = document.getElementById('tabsToOpen');
 
 	chrome.storage.sync.get(k, function(result) {
 		var p = document.createElement('p');
-		p.style.marginBottom = '-10px';
 		for (var url in result[k]) {
 			var t = document.createTextNode(url);
 			var br = document.createElement('br');
 			p.appendChild(t);
 			p.appendChild(br);
-			//tabsToOpen.appendChild(t);
 		}
 		document.getElementById('tabsToOpen').appendChild(p);
 	})
